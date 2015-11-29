@@ -7,17 +7,21 @@
             .when("/", {
                 templateUrl: "home/home.view.html "
             }).when("/profile", {
-                templateUrl: "profile.html"
+                templateUrl: "profile/profile.view.html",
+                controller: "ProfileController"
             }).when("/admin", {
                 templateUrl: "admin.html"
             }).when("/forms", {
-                templateUrl: "forms.html"
+                templateUrl: "form/form.view.html",
+                controller: "FormController"
             })
             .when("/register", {
-                templateUrl: "register.html"
+                templateUrl: "register/register.view.html",
+                controller: "RegisterController"
             })
             .when("/login", {
-                templateUrl: "login/login.view.html"
+                templateUrl: "login/login.view.html",
+                controller: "LoginController"
             })
 
         .otherwise({

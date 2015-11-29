@@ -8,8 +8,7 @@
 
 
 
-    function UserService() {
-        alert("user service");
+    function UserService($rootScope) {
         // all users here. 
         var users = [];
 
@@ -26,7 +25,7 @@
         function findUserByUsernameAndPassword(username, password, callback) {
             var user = null;
 
-            for (u in users) {
+            for (var  u in users) {
                 if (users[u].username == username && users[u].password == password) {
                     user = users[u];
                     break;
@@ -48,7 +47,7 @@
         }
 
         function deleteUserById(id, callback) {
-            for (u in users) {
+            for (var u in users) {
                 if (users[u].id == id) {
                     users.splice(u, 1);
                     break;
@@ -60,7 +59,7 @@
 
 
         function updateUser(id, user, callback) {
-            for (u in users) {
+            for (var  u in users) {
                 if (users[u].id == id) {
                     users[u] = user;
                     break;

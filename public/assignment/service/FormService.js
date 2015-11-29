@@ -14,7 +14,8 @@
             deleteFormById: deleteFormById,
             updateFormById: updateFormById
         };
-
+         
+        return service;
 
         function createFormForUser(userId, form, callback) {
 
@@ -31,7 +32,7 @@
 
             var ret = [];
 
-            for (f in forms) {
+            for (var f in forms) {
                 if (forms[f].userid == userId)
                     ret.push(forms[f]);
             }
@@ -41,7 +42,7 @@
 
         function deleteFormById(formId, callback) {
             // MAYBE buggy!
-            for (f in forms) {
+            for (var f in forms) {
                 if (forms[f].id == formId)
                     forms.splice(f, 1);
             }
@@ -50,11 +51,11 @@
         }
 
         function updateFormById(formId, newForm, callback) {
-            for (f in forms) {
+            for (var f in forms) {
                 if (forms[f].id == formId)
                     forms[f] = newForm;
             }
-
+            
             callback(newForm);
         }
 
