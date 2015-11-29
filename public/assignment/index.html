@@ -1,0 +1,31 @@
+<html ng-app="FormBuilderApp">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--for GUID-->
+    <script src="http://chancejs.com/chance.min.js"></script>
+
+    <!--below are my code-->
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="header/header.contoller.js"></script>
+    <script src="sidebar/sidebar.controller.js"></script>
+    <script src="service/UserService.js"></script>
+    <script src="service/FormService.js"></script>
+    <script src="login/login.controller.js"></script>
+
+</head>
+
+<body class="container">
+    <div ng-include src="'header/header.view.html'"></div>
+    <div ng-include src="'sidebar/sidebar.view.html'"></div>
+    <!--to be configured by config.js-->
+    <div ng-view>
+    </div>
+</body>
+
+</html>
