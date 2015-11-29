@@ -28,7 +28,7 @@
                                 <span ng-click="updateForm()" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
 
                             </td>
-                            <tr ng-repeat="form in forms">
+                            <tr ng-repeat="form in forms track by $index">
                                 <td>
                                     <a>{{form.name}}</a>
                                 </td>

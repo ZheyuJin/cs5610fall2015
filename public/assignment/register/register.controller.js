@@ -10,7 +10,7 @@
                 var newUser = {};
                 newUser.username = $scope.username;
                 newUser.password = $scope.password;
-                newUser.email = $scope.email;
+                newUser.email = $scope.emailaddr;
 
 
                 UserService.createUser(newUser, callback);

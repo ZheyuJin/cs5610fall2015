@@ -18,13 +18,14 @@
         return service;
 
         function createFormForUser(userId, form, callback) {
+            var newForm = {};
+            newForm = form;
+            newForm.id = chance.guid();
+            newForm.userid = userId;
 
-            form.id = chance.guid();
-            form.userid = userId;
+            forms.push(newForm);
 
-            forms.push(form);
-
-            return callback(form);
+            return callback(newForm);
         }
 
         function findAllFormsForUser(userId, callback) {
@@ -41,13 +42,17 @@
         }
 
         function deleteFormById(formId, callback) {
+            debugger;
             // MAYBE buggy!
             for (var f in forms) {
-                if (forms[f].id == formId)
+                if (forms[f].id == formId){
                     forms.splice(f, 1);
+                    callback(forms.slice(0));
+                    return;
+                }
             }
 
-            callback(forms);
+            
         }
 
         function updateFormById(formId, newForm, callback) {
