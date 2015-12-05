@@ -10,7 +10,7 @@
                 templateUrl: "profile/profile.view.html",
                 controller: "ProfileController"
             }).when("/admin", {
-                templateUrl: "admin.html"
+                templateUrl: "admin/admin.view.html"
             }).when("/forms", {
                 templateUrl: "form/form.view.html",
                 controller: "FormController"
