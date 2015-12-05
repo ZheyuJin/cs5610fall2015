@@ -115,7 +115,7 @@ var SampleApp = function() {
     self.initializeServer = function() {
         self.createRoutes();
         self.app = express.createServer();
-        self.app.use(express.static('public/assignment'));
+        self.app.use(express.static('public/assignment/client'));
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
