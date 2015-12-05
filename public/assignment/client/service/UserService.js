@@ -5,14 +5,9 @@
         //    factory is just a registry for services. each service is just a function object.
         .factory("UserService", UserService);
 
+    function UserService($rootScope,$http, $q) {
 
-
-
-    function UserService($rootScope) {
-        // all users here. 
-        var users = [];
-
-        var service = {
+        var api = {
             findUserByUsernameAndPassword: findUserByUsernameAndPassword,
             findAllUsers: findAllUsers,
             createUser: createUser,
@@ -20,53 +15,38 @@
             updateUser: updateUser
         };
 
-        return service;
+        return api;
 
-        function findUserByUsernameAndPassword(username, password, callback) {
-            var user = null;
-
-            for (var  u in users) {
-                if (users[u].username == username && users[u].password == password) {
-                    user = users[u];
-                    break;
-                }
-            }
-
-            return callback(user);
+        /*impl below*/
+        
+        function findUserByUsernameAndPassword(username, password) {
+            var d = $q.defer();
+            $http.get("/api/assignment/user?username=" + username + "&password=" + password).success(d.resolve);
+            return d.promise;
         }
 
-        function findAllUsers(callback) {
-            return callback(users);
+        function findAllUsers() {
+            var d = $q.defer();
+            $http.get("/api/assignment/user").success(d.resolve);
+            return d.promise;
         }
 
-        function createUser(user, callback) {
-            /* guid generation*/
-            user.id = chance.guid();
-            users.push(user);
-            return callback(user)
+        function createUser(user) {
+            var d = $q.defer();
+            $http.post("/api/assignment/user", user).success(d.resolve);
+            return d.promise;
         }
 
-        function deleteUserById(id, callback) {
-            for (var u in users) {
-                if (users[u].id == id) {
-                    users.splice(u, 1);
-                    break;
-                }
-            }
-
-            callback(users);
+        function deleteUserById(id) {
+            var d = $q.defer();
+            $http.delete("/api/assignment/user/" + id).success(d.resolve);
+            return d.promise;
         }
 
-
-        function updateUser(id, user, callback) {
-            for (var  u in users) {
-                if (users[u].id == id) {
-                    users[u] = user;
-                    break;
-                }
-            }
-
-            callback(user);
+        function updateUser(id, user) {
+            var d = $q.defer();
+            $http.put("/api/assignment/user/" + id, user).success(d.resolve);
+            return d.promise;
         }
     };
 

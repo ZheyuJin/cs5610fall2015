@@ -3,6 +3,9 @@
 var express = require('express');
 var fs      = require('fs');
 
+var bodyParser = require('body-parser');
+var multer = require('multer'); // v1.0.5
+var upload = multer(); // for parsing multipart/form-data
 
 /**
  *  Define the sample application.
@@ -116,6 +119,12 @@ var SampleApp = function() {
         self.createRoutes();
         self.app = express.createServer();
         self.app.use(express.static('public/assignment/client'));
+        self.app.use(bodyParser.json()); // for parsing application/json
+        self.app.use(bodyParser.urlencoded({
+            extended: true
+        })); // for parsing application/x-www-form-urlencoded
+        self.app.use(multer());
+
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
             self.app.get(r, self.routes[r]);
@@ -135,6 +144,10 @@ var SampleApp = function() {
         self.initializeServer();
     };
 
+    self.bindServices = function () {
+        var servicesModule = require("./public/assignment/server/app.js");
+        var services = new servicesModule(self.app);
+    }
 
     /**
      *  Start the server (starts up the sample application).
@@ -156,5 +169,6 @@ var SampleApp = function() {
  */
 var zapp = new SampleApp();
 zapp.initialize();
+zapp.bindServices();
 zapp.start();
 

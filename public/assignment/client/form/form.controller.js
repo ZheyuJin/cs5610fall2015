@@ -7,13 +7,13 @@
 
     function FormController($scope, $rootScope, $location, FormService) {
         var user = $rootScope.currentUser;
-        
+
         if (user == undefined) {
             alert("not logged in !");
             return;
         }
 
-        FormService.findAllFormsForUser(user.id, updateForms);
+        FormService.findAllFormsForUser(user.id).then(updateForms);
 
         // loadl all forms
         function updateForms(fs) {
@@ -25,7 +25,7 @@
             var form = {};
             form.name = $scope.formname;
 
-            FormService.createFormForUser(user.id, form, addNewForm);
+            FormService.createFormForUser(user.id, form).then(addNewForm);
             clear();
             // add to model 
             function addNewForm(newForm) {
@@ -38,7 +38,7 @@
             if ($scope.selectedFormIdx != undefined) {
                 var idx = $scope.selectedFormIdx;
                 $scope.forms[idx].name = $scope.formname;
-                FormService.updateFormById($scope.forms[idx].id, $scope.forms[idx], getNewForm);
+                FormService.updateFormById($scope.forms[idx].id, $scope.forms[idx]).then(getNewForm);
 
                 function getNewForm(newForm) {
                     $scope.forms[idx] = newForm;
@@ -54,14 +54,14 @@
         }
 
         $scope.deleteForm = function (index) {
-            FormService.deleteFormById($scope.forms[index].id, bindRemaining);
+            FormService.deleteFormById($scope.forms[index].id).then(bindRemaining);
 
             function bindRemaining(fs) {
                 $scope.forms = fs;
             }
         }
 
-        function clear(){
+        function clear() {
             $scope.selectedFormIdx = undefined;
             $scope.formname = undefined;
         }

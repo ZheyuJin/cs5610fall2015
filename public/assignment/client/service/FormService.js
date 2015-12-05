@@ -5,64 +5,42 @@
         //    factory is just a registry for services. each service is just a function object.
         .factory("FormService", FormService);
 
-    function FormService() {
-        var forms = [];
-
-        var service = {
+    function FormService($http, $q) {
+        var api = {
             createFormForUser: createFormForUser,
             findAllFormsForUser: findAllFormsForUser,
             deleteFormById: deleteFormById,
             updateFormById: updateFormById
         };
-         
-        return service;
 
-        function createFormForUser(userId, form, callback) {
-            var newForm = {};
-            newForm = form;
-            newForm.id = chance.guid();
-            newForm.userid = userId;
+        return api;
 
-            forms.push(newForm);
-
-            return callback(newForm);
+        /*impl below*/
+        
+        function createFormForUser(userId, form) {
+            var d = $q.defer();
+            $http.post("/api/assignment/user/" + userId + "/form", form).success(d.resolve);
+            return d.promise;
         }
 
-        function findAllFormsForUser(userId, callback) {
-
-
-            var ret = [];
-
-            for (var f in forms) {
-                if (forms[f].userid == userId)
-                    ret.push(forms[f]);
-            }
-
-            callback(ret);
+        function findAllFormsForUser(userId) {
+            var d = $q.defer();
+            $http.get("/api/assignment/user/" + userId + "/form").success(d.resolve);
+            return d.promise;
         }
 
-        function deleteFormById(formId, callback) {
-            debugger;
-            // MAYBE buggy!
-            for (var f in forms) {
-                if (forms[f].id == formId){
-                    forms.splice(f, 1);
-                    callback(forms.slice(0));
-                    return;
-                }
-            }
-
-            
+        function deleteFormById(formId) {
+            var d = $q.defer();
+            $http.delete("/api/assignment/form/" + formId).success(d.resolve);
+            return d.promise;
         }
 
-        function updateFormById(formId, newForm, callback) {
-            for (var f in forms) {
-                if (forms[f].id == formId)
-                    forms[f] = newForm;
-            }
-            
-            callback(newForm);
+        function updateFormById(formId, newForm) {
+            var d = $q.defer();
+            $http.put("/api/assignment/form/" + formId, newForm).success(d.resolve);
+            return d.promise;
         }
+
 
     }
 })();

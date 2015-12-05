@@ -7,7 +7,7 @@
 
         // fill form with current user info.
         if ($rootScope.currentUser != null) {
-            
+
             var currentUser = $rootScope.currentUser;
             $scope.username = currentUser.username;
             $scope.password = currentUser.password;
@@ -15,13 +15,15 @@
             $scope.lastname = currentUser.lastname;
             $scope.email = currentUser.email;
         }
-        
+
         // click function.
         $scope.update = function () {
-            
-            var user = $rootScope.currentUser;
 
-            console.log(user);
+            var user = $rootScope.currentUser;
+            if (!user) {
+                alert("please login");
+                return;
+            }
 
             user.username = $scope.username;
             user.password = $scope.password;
@@ -29,11 +31,9 @@
             user.lastname = $scope.lastname;
             user.email = $scope.email;
 
-            console.log(user);
+            UserService.updateUser(user.id, user).then(callback);
 
-            UserService.updateUser(user.id, user, callback);
-            
-            
+
             function callback(_user) {
 
                 $rootScope.currentUser = _user;

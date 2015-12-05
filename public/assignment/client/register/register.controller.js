@@ -13,7 +13,7 @@
                 newUser.email = $scope.emailaddr;
 
 
-                UserService.createUser(newUser, callback);
+                UserService.createUser(newUser).then(callback);
                 console.log(newUser);
 
                 function callback(user) {
