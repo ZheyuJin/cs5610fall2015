@@ -26,7 +26,7 @@ module.exports = function (app) {
     }
 
     function findUserById(id) {
-        var lst = userList.filter(user => user.id == id);
+        var lst = userList.filter((user) => {user.id == id});
         // cant find.
         if (lst.length == 0)
             return null;
