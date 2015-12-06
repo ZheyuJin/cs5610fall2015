@@ -158,8 +158,7 @@ var SampleApp = function() {
 
 
     self.bindServices = function () {
-        var servicesModule = require("./public/assignment/server/app.js");
-        var services = new servicesModule(self.app);
+//        var services = require("./public/assignment/server/app.js")(self.app);
     }
 
 
