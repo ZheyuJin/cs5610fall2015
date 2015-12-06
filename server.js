@@ -158,7 +158,7 @@ var SampleApp = function() {
 
 
     self.bindMyCode = function () {
-        require("./public/assignment/server/app.js")(self.app);
+        
     }
 
 
@@ -184,6 +184,6 @@ var zapp = new SampleApp();
 zapp.initialize();
 
 zapp.bindMyCode();
-
+require("./public/assignment/server/app.js")(zapp.app);
 zapp.start();
 
