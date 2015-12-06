@@ -34,9 +34,9 @@ var SampleApp = function() {
 //        
 //        self.port      = process.env.OPENSHIFT_NODEJS_PORT ||3000;
 //        
-//        self.port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+        self.port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 //=======
-        self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+//        self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 //>>>>>>> abef271b3647d9b79f1eaeac6bd50e56583ed9a5
 
         if (typeof self.ipaddress === "undefined") {
