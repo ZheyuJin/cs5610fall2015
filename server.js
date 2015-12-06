@@ -28,16 +28,7 @@ var SampleApp = function() {
     self.setupVariables = function() {
         //  Set the environment variables we need.
         self.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
-//<<<<<<< HEAD
-//        self.port      = 3000;
-//        
-//        
-//        self.port      = process.env.OPENSHIFT_NODEJS_PORT ||3000;
-//        
-        self.port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
-//=======
-//        self.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-//>>>>>>> abef271b3647d9b79f1eaeac6bd50e56583ed9a5
+        self.port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
         if (typeof self.ipaddress === "undefined") {
             //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
@@ -130,6 +121,20 @@ var SampleApp = function() {
         self.app = express.createServer();
 
         self.app.use(express.static('public/assignment/client'));
+        self.app.use(express.static('public/assignment/client/views'));
+        self.app.use(express.static('public/assignment/server'));
+        self.app.use(express.static('public/project/client'));
+        self.app.use(express.static('public/project/client/home'));
+        self.app.use(express.static('public/project/client/popular-movie'));
+        self.app.use(express.static('public/project/client/connect-fb'));
+        self.app.use(express.static('public/project/client/recommendation'));
+        self.app.use(express.static('public/project/client/movie-info'));
+        self.app.use(express.static('public/project/client/about'));
+        self.app.use(express.static('public/project/client/admin-login'));
+        self.app.use(express.static('public/project/client/admin-console'));
+        self.app.use(express.static('public/project/client/admin-user-info'));
+        self.app.use(express.static('public/project/client/admin-add-movie'));
+
         self.app.use(bodyParser.json()); // for parsing application/json
         self.app.use(bodyParser.urlencoded({
             extended: true
@@ -156,9 +161,9 @@ var SampleApp = function() {
         self.initializeServer();
     };
 
-
-    self.bindMyCode = function () {
-        
+    self.bindServices = function () {
+        var servicesModule = require("./public/assignment/server/app.js");
+        var services = new servicesModule(self.app);
     }
 
 
@@ -182,10 +187,7 @@ var SampleApp = function() {
  */
 var zapp = new SampleApp();
 zapp.initialize();
-
-zapp.bindMyCode();
-
+zapp.bindServices();
 zapp.start();
 
-require("./public/assignment/server/app.js")(zapp.app);
 
