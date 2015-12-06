@@ -157,10 +157,10 @@ var SampleApp = function() {
     };
 
 
-    self.bindServices = function () {
-        var servicesModule = require("./public/assignment/server/app.js");
-        var services = new servicesModule(self.app);
-    }
+//    self.bindServices = function () {
+//        var servicesModule = require("./public/assignment/server/app.js");
+//        var services = new servicesModule(self.app);
+//    }
 
 
     /**
