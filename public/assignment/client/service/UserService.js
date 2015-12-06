@@ -5,7 +5,7 @@
         //    factory is just a registry for services. each service is just a function object.
         .factory("UserService", UserService);
 
-    function UserService($rootScope,$http, $q) {
+    function UserService($rootScope, $http, $q) {
 
         var api = {
             findUserByUsernameAndPassword: findUserByUsernameAndPassword,
@@ -18,7 +18,7 @@
         return api;
 
         /*impl below*/
-        
+
         function findUserByUsernameAndPassword(username, password) {
             var d = $q.defer();
             $http.get("/api/assignment/user?username=" + username + "&password=" + password).success(d.resolve);
@@ -33,7 +33,9 @@
 
         function createUser(user) {
             var d = $q.defer();
-            $http.post("/api/assignment/user", user).success(d.resolve);
+            $http.post("/api/assignment/user", user).success((data) => {
+                d.resolve(data)
+            });
             return d.promise;
         }
 

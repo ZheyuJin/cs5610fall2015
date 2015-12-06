@@ -5,7 +5,7 @@
             <h1>Forms </h1>
             <ul class="nav nav-tabs">
                 <li role="presentation" class="active"><a href="forms.html">Forms</a></li>
-                <li role="presentation"><a href="form-fields.html">Fields</a></li>
+                <li role="presentation"><a >Fields</a></li>
             </ul>
 
             <div class="table-responsive">
@@ -21,20 +21,20 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input ng-model="formname" type="text" placeholder="name">
+                                <input ng-model="model.formname" type="text" placeholder="name">
                             </td>
                             <td>
-                                <span ng-click="addForm()" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                <span ng-click="updateForm()" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                <span ng-click="model.addForm()" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                <span ng-click="model.updateForm()" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
 
                             </td>
-                            <tr ng-repeat="form in forms track by $index">
+                            <tr ng-repeat="form in model.forms track by $index">
                                 <td>
-                                    <a>{{form.name}}</a>
+                                    <a href="#/user/{{model.userId}}/form/{{form.id}}/fields">{{form.title}}</a>
                                 </td>
                                 <td>
-                                    <span ng-click="deleteForm($index)" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    <span ng-click="selectForm($index)" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                    <span ng-click="model.deleteForm($index)" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    <span ng-click="model.selectForm($index)" class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                 </td>
                             </tr>
                     </tbody>

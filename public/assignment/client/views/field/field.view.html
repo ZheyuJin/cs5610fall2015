@@ -1,0 +1,90 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h1 class="page-header">Forms : Registration Form</h1>
+    <div class="row placeholders">
+        <ul class="nav nav-tabs">
+            <li><a href="#/form">Forms</a></li>
+            <li class="active"><a>Fields</a></li>
+        </ul>
+
+        <div ng-repeat="field in model.fields">
+            <div class="row">
+                <div class="col-sm-8 form-group" ng-switch="field.type">
+                    <br>
+                    <!-- Single Line Text-->
+                    <div ng-switch-when="TEXT">
+                        <label for="{{field.id}}">{{field.label}}:</label>
+                        <input type="text" class="form-control" id="{{field.id}}" placeholder="{{field.placeholder}}">
+                    </div>
+                    <!-- Multi Line Text-->
+                    <div ng-switch-when="TEXTAREA">
+                        <label for="{{field.id}}">{{field.label}}:</label>
+                        <textarea type="text" class="form-control" id="{{field.id}}" placeholder="{{field.placeholder}}" />
+                    </div>
+                    <!-- Date -->
+                    <div ng-switch-when="DATE">
+                        <label for="{{field.id}}">{{field.label}}:</label>
+                        <input type="text" class="form-control" id="{{field.id}}" placeholder="{{field.placeholder}}" onfocus="(this.type='date')">
+                    </div>
+                    <!-- Dropdown -->
+                    <div ng-switch-when="OPTIONS">
+                        <label for="{{field.id}}">{{field.label}}:</label>
+                        <select id="{{field.id}}" class="form-control">
+                            <!--one more loop -->
+                            <option ng-repeat="option in field.options" value="{{option.value}}">{{option.label}}</option>
+                        </select>
+                    </div>
+                    <!-- Checkboxes -->
+                    <div ng-switch-when="CHECKBOXES">
+                        <label for="{{field.id}}">{{field.label}}:</label>
+                        <div id="{{field.id}}" class="checkbox">
+                            <!--one more loop -->
+                            <label class="block" ng-repeat="option in field.options">
+                                <input type="checkbox" value="{{option.value}}">{{option.label}}
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Radio  -->
+                    <div ng-switch-when="RADIOS">
+                        <label for="{{field.id}}">{{field.label}}:</label>
+                        <div id="{{field.id}}" class="radio">
+                            <!--one more loop -->
+                            <label class="block" ng-repeat="option in field.options">
+                                <input type="radio" ng-model="$parent.pageSet" value="{{option.value}}">{{option.label}}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-pencil" style="margin-top:35px;"></span>
+                    <span class="glyphicon glyphicon-plus" style="margin-top:35px;"></span>
+                    <span ng-click="model.removeField(field)" class="glyphicon glyphicon-remove" style="margin-top:30px;"></span>
+                    <span class="glyphicon glyphicon-align-justify" style="margin-top:35px;"></span>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!--add field block-->
+        <div class="row">
+            <div class="col-sm-8 form-group">
+
+                <label for="add-field">Add New Field:</label>
+                <select ng-model="model.fieldType" id="add-field" class="form-control">
+                    <option value="TEXT">Single Line Text Field</option>
+                    <option value="TEXTAREA">Multi Line Text Field</option>
+                    <option value="DATE">Date Field</option>
+                    <option value="OPTIONS">Dropdown Field</option>
+                    <option value="CHECKBOXES">Checkboxes Field</option>
+                    <option value="RADIOS">Radio Buttons Field</option>
+                </select>
+
+            </div>
+            <div class="col-sm-4">
+                <span ng-click="model.addField(model.fieldType)" class="glyphicon glyphicon-plus" style="margin-top:30px;"></span>
+            </div>
+        </div>
+
+    </div>
+</div>

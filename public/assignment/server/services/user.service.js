@@ -9,6 +9,7 @@ module.exports = function (app, userModel, db) {
         var user = req.body;
         user.id = uuid.v1();
         var response = userModel.createUser(user);
+        console.log(response)
         res.json(response);
     });
 

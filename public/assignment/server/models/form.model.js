@@ -49,7 +49,7 @@ module.exports = function (app) {
             if (formList[index].id == id)
                 formList.splice(index, 1);
         }
-        return null;
+        return formList;
     }
 
     function findFormByTitle(title) {
@@ -73,8 +73,8 @@ module.exports = function (app) {
 
     function removeField(formId, fieldId) {
         var form = findFormById(formId);
-
-        if (!form) {
+        console.log("removeField\t" + formId + "\t " + fieldId)
+        if (form) {
             for (var index in form.fields) {
                 if (form.fields[index].id == fieldId) {
                     form.fields.splice(index, 1);

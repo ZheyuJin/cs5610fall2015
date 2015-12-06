@@ -36,6 +36,7 @@
 
         function deleteFieldFromForm(formId, fieldId) {
             var d = $q.defer();
+            console.log("delete" + formId + fieldId);
             $http.delete("/api/assignment/form/" + formId + "/field/" + fieldId).success(d.resolve);
             return d.promise;
         }
