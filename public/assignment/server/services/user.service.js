@@ -4,8 +4,8 @@ module.exports = function (app, userModel, db) {
 
     /*try some functional styles..*/
 
-    app.post("/api/assignment/user", (req, res) => {
-        
+    app.post("/api/assignment/user", function (req, res) {
+
         var user = req.body;
         user.id = uuid.v1();
         var response = userModel.createUser(user);
@@ -13,7 +13,7 @@ module.exports = function (app, userModel, db) {
         res.json(response);
     });
 
-    app.get("/api/assignment/user", (req, res) => {
+    app.get("/api/assignment/user", function (req, res) {
         var username = req.query.username;
         var password = req.query.password;
 
@@ -37,18 +37,18 @@ module.exports = function (app, userModel, db) {
     });
 
 
-    app.get("/api/assignment/user/:id", function(req, res)  {
+    app.get("/api/assignment/user/:id", function (req, res) {
         var id = req.params.id;
         res.json(userModel.findUserById(id));
     });
 
-    app.put("/api/assignment/user/:id", (req, res) => {
+    app.put("/api/assignment/user/:id", function (req, res) {
         var id = req.params.id;
         var user = req.body;
         res.json(userModel.updateUser(id, user));
     });
 
-    app.delete("/api/assignment/user/:id", (req, res) => {
+    app.delete("/api/assignment/user/:id", function (req, res) {
         var id = req.params.id;
         res.json(userModel.deleteUser(id));
     });
