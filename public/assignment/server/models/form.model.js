@@ -30,7 +30,9 @@ module.exports = function (app) {
 
     function findFormById(id) {
         // if exists, return elelment; otherwise null/undefined
-        return formList.filter(ele => ele.id == id)[0];
+        return formList.filter(function (ele) {
+            return ele.id == id;
+        })[0];
     }
 
     function updateForm(id, form) {
@@ -53,11 +55,15 @@ module.exports = function (app) {
     }
 
     function findFormByTitle(title) {
-        return formList.filter(ele => ele.title == title)[0];
+        return formList.filter(function (ele) {
+            return ele.title == title;
+        })[0];
     }
 
     function findFormsForUser(userId) {
-        return formList.filter(u => u.userId == userId);
+        return formList.filter(function (u) {
+            return u.userId == userId
+        });
     }
 
     function getFieldsByFormId(id) {
@@ -68,7 +74,9 @@ module.exports = function (app) {
 
     function getField(formId, fieldId) {
         var form = findFormById(formId);
-        return form ? (form.fields.filter(ele => ele.id == fieldId)[0]) : [];
+        return form ? (form.fields.filter(function (ele) {
+            return ele.id == fieldId;
+        })[0]) : [];
     }
 
     function removeField(formId, fieldId) {

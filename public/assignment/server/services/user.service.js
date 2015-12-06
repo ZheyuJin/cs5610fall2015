@@ -37,7 +37,7 @@ module.exports = function (app, userModel, db) {
     });
 
 
-    app.get("/api/assignment/user/:id", (req, res) => {
+    app.get("/api/assignment/user/:id", function(req, res)  {
         var id = req.params.id;
         res.json(userModel.findUserById(id));
     });
