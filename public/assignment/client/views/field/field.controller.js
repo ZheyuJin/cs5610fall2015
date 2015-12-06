@@ -5,7 +5,7 @@
     function FieldController($routeParams, FieldService) {
         var model = this;
 
-        alert("field contoller in control ");
+        
         
         /*values come from form view, parsed here*/
         var userId = $routeParams.userId;
