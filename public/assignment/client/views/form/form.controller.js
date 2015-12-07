@@ -1,10 +1,11 @@
 (function () {
-    "use strict";
+     // "use strict";
     angular.module("FormBuilderApp").controller("FormController", FormController);
 
 
     function FormController($scope, $rootScope, $location, FormService) {
         var _this = this;
+        _this.forms=[];
         var user = $rootScope.currentUser;
 
 
@@ -20,6 +21,7 @@
 
         // loadl all forms
         function updateForms(fs) {
+            console.log(fs);
             _this.forms = fs;
         }
 
@@ -47,7 +49,7 @@
 
         }
 
-        _this.updateForm = () => {
+        _this.updateForm = function ()  {
             if (_this.selectedFormIdx) {
                 alert("_this.selectedFormIdx" + _this.selectedFormIdx);
 

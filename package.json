@@ -26,7 +26,9 @@
     "body-parser": "~1.14.1",
     "express": "~3.4.4",
     "multer": "~1.1.0",
-    "q": "~1.4.1"
+    "q": "~1.4.1",
+    "fs": "0.0.2",
+    "mongoose": "~4.2.9"
   },
   "devDependencies": {},
   "bundleDependencies": [],
