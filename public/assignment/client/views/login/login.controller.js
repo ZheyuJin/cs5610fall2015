@@ -12,7 +12,7 @@
 
             function callback(currentUser) {
                 console.log("callback : " + currentUser);
-                //                debugger;
+                                
                 if (!currentUser) {
                     alert('user does not exist');
                     return;

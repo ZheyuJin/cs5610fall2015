@@ -9,10 +9,11 @@
         if ($rootScope.currentUser != null) {
 
             var currentUser = $rootScope.currentUser;
+            console.log(currentUser);
             $scope.username = currentUser.username;
             $scope.password = currentUser.password;
-            $scope.firstname = currentUser.firstname;
-            $scope.lastname = currentUser.lastname;
+            $scope.firstname = currentUser.firstName;
+            $scope.lastname = currentUser.lastName;
             $scope.email = currentUser.email;
         }
 
