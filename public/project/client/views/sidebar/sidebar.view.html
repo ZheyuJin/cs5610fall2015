@@ -1,0 +1,16 @@
+<div class="col-sm-3 " ng-controller="SidebarController">
+    <ul class="nav nav-pills nav-stacked ">
+        <li ng-class="{'active' : $location.url() == '/' }">
+            <a href="#/home">Home</a>
+        </li>
+
+        <li ng-class="{'active' : $location.url().indexOf('collections') !=-1 }">
+            <a href="#/collections">Collections</a></li>
+        <li ng-class="{'active' : $location.url().indexOf('recommendations') !=-1 }">
+            <a href="#/recommendations">Recommendations</a></li>
+        <li ng-class="{'active' : $location.url().indexOf('profile') !=-1 }">
+            <a href="#/profile">Profile</a></li>
+
+        
+    </ul>
+</div>

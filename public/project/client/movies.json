@@ -1,0 +1,844 @@
+[
+  {
+    "date": "December 11 ",
+    "movies": [
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Jared Hess",
+            "nameId": "nm0381478"
+          }
+        ],
+        "filmingLocations": [
+          "Utah",
+          "USA"
+        ],
+        "genres": [
+          "Comedy"
+        ],
+        "idIMDB": "tt3534282",
+        "languages": [
+          "English"
+        ],
+        "metascore": "",
+        "originalTitle": "",
+        "plot": "Hired by an ambitious small-town pastor to find sacred relics in the Holy Land, a self-proclaimed Biblical archaeologist comes up short and his attempt to cover up his failure fuels a comic conspiracy from the filmmaking team behind Napoleon Dynamite and Nacho Libre. DON VERDEAN stars Sam Rockwell, Amy Ryan, Jemaine Clement, Leslie Bibb, with Will Forte, and Danny McBride.",
+        "rated": "PG-13",
+        "rating": "6.0",
+        "releaseDate": "20151211",
+        "runtime": [
+          "90 min"
+        ],
+        "simplePlot": "A self-professed biblical archaeologist who has fallen on hard times starts to bend the truth in order to continue inspiring the faithful.",
+        "title": "Don Verdean",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt3534282",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMTAzODQyMjM3NTleQTJeQWpwZ15BbWU4MDc2NDY5MDcx._V1_SX214_AL_.jpg",
+        "votes": "164",
+        "writers": [
+          {
+            "name": "Jared Hess",
+            "nameId": "nm0381478"
+          },
+          {
+            "name": "Jerusha Hess",
+            "nameId": "nm1415801"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Ron Howard",
+            "nameId": "nm0000165"
+          }
+        ],
+        "filmingLocations": [
+          "London",
+          "England",
+          "UK"
+        ],
+        "genres": [
+          "Action",
+          "Adventure",
+          "Biography",
+          "Drama",
+          "History",
+          "Thriller"
+        ],
+        "idIMDB": "tt1390411",
+        "languages": [
+          "English"
+        ],
+        "metascore": "50/100",
+        "originalTitle": "",
+        "plot": "In the winter of 1820, the New England whaling ship Essex was assaulted by something no one could believe: a whale of mammoth size and will, and an almost human sense of vengeance. The real-life maritime disaster would inspire Herman Melville's Moby-Dick. But that told only half the story. \"In the Heart of the Sea\" reveals the encounter's harrowing aftermath, as the ship's surviving crew is pushed to their limits and forced to do the unthinkable to stay alive. Braving storms, starvation, panic and despair, the men will call into question their deepest beliefs, from the value of their lives to the morality of their trade, as their captain searches for direction on the open sea and his first mate still seeks to bring the great whale down.",
+        "rated": "PG-13",
+        "rating": "7.6",
+        "releaseDate": "20151211",
+        "runtime": [
+          "121 min"
+        ],
+        "simplePlot": "Based on the 1820 event, a whaling ship is preyed upon by a sperm whale, stranding its crew at sea for 90 days, thousands of miles from home.",
+        "title": "In the Heart of the Sea",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt1390411",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMjA5NzUwODExM15BMl5BanBnXkFtZTgwNjM0MzE4NjE@._V1_SX214_AL_.jpg",
+        "votes": "2,546",
+        "writers": [
+          {
+            "name": "Charles Leavitt",
+            "nameId": "nm0495378"
+          },
+          {
+            "name": "Charles Leavitt",
+            "nameId": "nm0495378"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "UK",
+          "France"
+        ],
+        "directors": [
+          {
+            "name": "Brian Helgeland",
+            "nameId": "nm0001338"
+          }
+        ],
+        "filmingLocations": [
+          "Burnham Beeches",
+          "Buckinghamshire",
+          "England",
+          "UK"
+        ],
+        "genres": [
+          "Biography",
+          "Crime",
+          "Thriller"
+        ],
+        "idIMDB": "tt3569230",
+        "languages": [
+          "English"
+        ],
+        "metascore": "54/100",
+        "originalTitle": "",
+        "plot": "Focusing on the relationship between Reggie Kray and Frances Shea, told from France's' point of view as someone who knew him best, as well as the mental health issues Ronnie Kray faced and their rise to power as the notorious gangsters of London.",
+        "rated": "R",
+        "rating": "7.4",
+        "releaseDate": "20151120",
+        "runtime": [
+          "131 min"
+        ],
+        "simplePlot": "The film tells the story of the identical twin gangsters Reggie and Ronnie Kray, two of the most notorious criminals in British history, and their organised crime empire in the East End of London during the 1960s.",
+        "title": "Legend",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt3569230",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMjE0MjkyODQ3NF5BMl5BanBnXkFtZTgwNDM1OTk1NjE@._V1_SY317_CR0,0,214,317_AL_.jpg",
+        "votes": "17,219",
+        "writers": [
+          {
+            "name": "Brian Helgeland",
+            "nameId": "nm0001338"
+          },
+          {
+            "name": "John Pearson",
+            "nameId": "nm0669301"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Adam McKay",
+            "nameId": "nm0570912"
+          }
+        ],
+        "filmingLocations": [
+          "New Orleans",
+          "Louisiana",
+          "USA"
+        ],
+        "genres": [
+          "Drama"
+        ],
+        "idIMDB": "tt1596363",
+        "languages": [
+          "English"
+        ],
+        "metascore": "72/100",
+        "originalTitle": "",
+        "plot": "Four outsiders in the world of high-finance who predicted the credit and housing bubble collapse of the mid-2000s decide to take on the big banks for their lack of foresight and greed.",
+        "rated": "R",
+        "rating": "8.0",
+        "releaseDate": "20151223",
+        "runtime": [
+          "130 min"
+        ],
+        "simplePlot": "Four outsiders in the world of high-finance who predicted the credit and housing bubble collapse of the mid-2000s decide to take on the big banks for their lack of foresight and greed.",
+        "title": "The Big Short",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt1596363",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMjM2MTQ2MzcxOF5BMl5BanBnXkFtZTgwNzE4NTUyNzE@._V1_SX214_AL_.jpg",
+        "votes": "575",
+        "writers": [
+          {
+            "name": "Michael Lewis",
+            "nameId": "nm1034122"
+          },
+          {
+            "name": "Adam McKay",
+            "nameId": "nm0570912"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "UK"
+        ],
+        "directors": [
+          {
+            "name": "Nicholas Hytner",
+            "nameId": "nm0405336"
+          }
+        ],
+        "filmingLocations": [
+          "Gloucester Crescent",
+          "Camden Town",
+          "London",
+          "England",
+          "UK"
+        ],
+        "genres": [
+          "Biography",
+          "Comedy",
+          "Drama"
+        ],
+        "idIMDB": "tt3722070",
+        "languages": [
+          "English"
+        ],
+        "metascore": "67/100",
+        "originalTitle": "",
+        "plot": "A man forms an unexpected bond with a transient woman living in her car that's parked in his driveway.",
+        "rated": "PG-13",
+        "rating": "6.9",
+        "releaseDate": "20160115",
+        "runtime": [
+          "104 min"
+        ],
+        "simplePlot": "A man forms an unexpected bond with a transient woman living in her car that's parked in his driveway.",
+        "title": "The Lady in the Van",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt3722070",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BOTY0MjM3NTQyOF5BMl5BanBnXkFtZTgwMzcwNjUxNzE@._V1_SX214_AL_.jpg",
+        "votes": "1,388",
+        "writers": [
+          {
+            "name": "Alan Bennett",
+            "nameId": "nm0003141"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "Brazil"
+        ],
+        "directors": [
+          {
+            "name": "Alê Abreu",
+            "nameId": "nm0994245"
+          }
+        ],
+        "filmingLocations": [],
+        "genres": [
+          "Animation",
+          "Adventure",
+          "Family"
+        ],
+        "idIMDB": "tt3183630",
+        "languages": [
+          "Portuguese"
+        ],
+        "metascore": "",
+        "originalTitle": "",
+        "plot": "An amazing Brazilian animation that truly exemplifies the power of imagery and music as a combination that has more than enough to portray a powerful and deep message. It shows an adventurous quest that illustrates the issues of the modern world through the eyes of a child. A cautionary tale of globalization, The Boy And The World teaches above all the dangers of the massification of the economy, of the mind, and of the soul.",
+        "rated": "PG",
+        "rating": "8.1",
+        "releaseDate": "20140117",
+        "runtime": [
+          "80 min"
+        ],
+        "simplePlot": "A little boy goes on an adventurous quest in search of his father.",
+        "title": "O Menino e o Mundo",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt3183630",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMTY4MTAwODg1NF5BMl5BanBnXkFtZTgwMTUyMDQyNzE@._V1_SY317_CR1,0,214,317_AL_.jpg",
+        "votes": "869",
+        "writers": [
+          {
+            "name": "Alê Abreu",
+            "nameId": "nm0994245"
+          }
+        ],
+        "year": "2013"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [],
+        "filmingLocations": [],
+        "genres": [
+          "Drama"
+        ],
+        "idIMDB": "tt3244446",
+        "languages": [
+          "English"
+        ],
+        "metascore": "",
+        "originalTitle": "",
+        "plot": "A yoga instructor looks to protect her sex-worker sister from her deadbeat boyfriend.",
+        "rated": "",
+        "rating": "",
+        "releaseDate": "20151103",
+        "runtime": [],
+        "simplePlot": "",
+        "title": "Bleeding Heart",
+        "urlIMDB": "http://www.imdb.com/title/tt3244446",
+        "urlPoster": "http://ia.media-imdb.com/images/G/01/imdb/images/nopicture/32x44/name-2138558783._CB379389446_.png",
+        "votes": "382",
+        "writers": [],
+        "year": ""
+      }
+    ]
+  },
+  {
+    "date": "In Theaters Now",
+    "movies": [
+      {
+        "countries": [
+          "USA",
+          "Germany"
+        ],
+        "directors": [
+          {
+            "name": "Francis Lawrence",
+            "nameId": "nm1349376"
+          }
+        ],
+        "filmingLocations": [
+          "Atlanta",
+          "Georgia",
+          "USA"
+        ],
+        "genres": [
+          "Adventure",
+          "Sci-Fi"
+        ],
+        "idIMDB": "tt1951266",
+        "languages": [
+          "English"
+        ],
+        "metascore": "65/100",
+        "originalTitle": "",
+        "plot": "After young Katniss Everdeen agrees to be the symbol of rebellion, the Mockingjay, she tries to return Peeta to his normal state, tries to get to the Capitol, and tries to deal with the battles coming her way...but all for her main goal; assassinating President Snow and returning peace to the Districts of Panem. As her squad starts to get smaller and smaller, will she make it to the Capitol? Will she get revenge on Snow? Or will her target change? Will she be with her \"Star-Crossed Lover\", Peeta? Or her long time friend, Gale? Deaths, Bombs, Bows and Arrows, A Love Triangle, Hope. What will happen?",
+        "rated": "PG-13",
+        "rating": "7.1",
+        "releaseDate": "20151120",
+        "runtime": [
+          "137 min"
+        ],
+        "simplePlot": "As the war of Panem escalates to the destruction of other districts by the Capitol, Katniss Everdeen, the reluctant leader of the rebellion, must bring together an army against President Snow, while all she holds dear hangs in the balance.",
+        "title": "The Hunger Games: Mockingjay - Part 2",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt1951266",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BNjQzNDI2NTU1Ml5BMl5BanBnXkFtZTgwNTAyMDQ5NjE@._V1_SX214_AL_.jpg",
+        "votes": "55,237",
+        "writers": [
+          {
+            "name": "Peter Craig",
+            "nameId": "nm0185976"
+          },
+          {
+            "name": "Danny Strong",
+            "nameId": "nm0834960"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Ryan Coogler",
+            "nameId": "nm3363032"
+          }
+        ],
+        "filmingLocations": [
+          "Philadelphia",
+          "Pennsylvania",
+          "USA"
+        ],
+        "genres": [
+          "Drama",
+          "Sport"
+        ],
+        "idIMDB": "tt3076658",
+        "languages": [
+          "English"
+        ],
+        "metascore": "82/100",
+        "originalTitle": "",
+        "plot": "Adonis Johnson is the son of the famous boxing champion Apollo Creed, who died in a boxing match in (1985). Adonis wasn't born until after his father's death and wants to follow his fathers footsteps in boxing. He seeks a mentor who is the former heavyweight boxing champion and former friend of Apollo Creed, the retired Rocky Balboa. Rocky eventually agrees to mentor Adonis. With Rocky's help they hope to get a title job to face even deadlier opponents than his father. But whether he is a true fighter remains to be seen....",
+        "rated": "PG-13",
+        "rating": "8.6",
+        "releaseDate": "20151125",
+        "runtime": [
+          "133 min"
+        ],
+        "simplePlot": "The former World Heavyweight Champion Rocky Balboa serves as a trainer and mentor to Adonis Johnson, the son of his late friend and former rival Apollo Creed.",
+        "title": "Creed",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt3076658",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BODg5NDM1MDI4NF5BMl5BanBnXkFtZTgwMzg0MzQxNzE@._V1_SX214_AL_.jpg",
+        "votes": "13,667",
+        "writers": [
+          {
+            "name": "Ryan Coogler",
+            "nameId": "nm3363032"
+          },
+          {
+            "name": "Aaron Covington",
+            "nameId": "nm2128400"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Peter Sohn",
+            "nameId": "nm0812307"
+          }
+        ],
+        "filmingLocations": [
+          "New York City Studio",
+          "New York City",
+          "New York",
+          "USA"
+        ],
+        "genres": [
+          "Animation",
+          "Adventure",
+          "Comedy",
+          "Family",
+          "Fantasy"
+        ],
+        "idIMDB": "tt1979388",
+        "languages": [
+          "English"
+        ],
+        "metascore": "66/100",
+        "originalTitle": "",
+        "plot": "\"The Good Dinosaur\" asks the question: What if the asteroid that forever changed life on Earth missed the planet completely and giant dinosaurs never became extinct? In this epic journey into the world of dinosaurs, an Apatosaurus named Arlo makes an unlikely human friend. While traveling through a harsh and mysterious landscape, Arlo learns the power of confronting his fears and discovers what he is truly capable of.",
+        "rated": "PG",
+        "rating": "7.3",
+        "releaseDate": "20151127",
+        "runtime": [
+          "93 min"
+        ],
+        "simplePlot": "An epic journey into the world of dinosaurs where an Apatosaurus named Arlo makes an unlikely human friend.",
+        "title": "The Good Dinosaur",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt1979388",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMTc5MTg2NjQ4MV5BMl5BanBnXkFtZTgwNzcxOTY5NjE@._V1_SX214_AL_.jpg",
+        "votes": "7,123",
+        "writers": [
+          {
+            "name": "Bob Peterson",
+            "nameId": "nm0677037"
+          },
+          {
+            "name": "Peter Sohn",
+            "nameId": "nm0812307"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "UK",
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Sam Mendes",
+            "nameId": "nm0005222"
+          }
+        ],
+        "filmingLocations": [
+          "Oujda",
+          "Morocco"
+        ],
+        "genres": [
+          "Action",
+          "Adventure",
+          "Thriller"
+        ],
+        "idIMDB": "tt2379713",
+        "languages": [
+          "English",
+          "Spanish",
+          "Italian",
+          "German",
+          "French"
+        ],
+        "metascore": "60/100",
+        "originalTitle": "",
+        "plot": "A cryptic message from the past sends James Bond on a rogue mission to Mexico City and eventually Rome, where he meets Lucia, the beautiful and forbidden widow of an infamous criminal. Bond infiltrates a secret meeting and uncovers the existence of the sinister organisation known as SPECTRE. Meanwhile back in London, Max Denbigh, the new head of the Centre of National Security, questions Bond's actions and challenges the relevance of MI6 led by M. Bond covertly enlists Moneypenny and Q to help him seek out Madeleine Swann, the daughter of his old nemesis Mr White, who may hold the clue to untangling the web of SPECTRE. As the daughter of the assassin, she understands Bond in a way most others cannot. As Bond ventures towards the heart of SPECTRE, he learns a chilling connection between himself and the enemy he seeks.",
+        "rated": "PG-13",
+        "rating": "7,1",
+        "releaseDate": "20151106",
+        "runtime": [
+          "148 min"
+        ],
+        "simplePlot": "A cryptic message from Bond's past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
+        "title": "Spectre",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt2379713",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMjM2Nzg4MzkwOF5BMl5BanBnXkFtZTgwNzA0OTE3NjE@._V1_SX214_AL_.jpg",
+        "votes": "129.362",
+        "writers": [
+          {
+            "name": "John Logan",
+            "nameId": "nm0517589"
+          },
+          {
+            "name": "Neal Purvis",
+            "nameId": "nm0701031"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Michael Dougherty",
+            "nameId": "nm1002424"
+          }
+        ],
+        "filmingLocations": [
+          "New Zealand"
+        ],
+        "genres": [
+          "Comedy",
+          "Fantasy",
+          "Horror"
+        ],
+        "idIMDB": "tt3850590",
+        "languages": [
+          "English"
+        ],
+        "metascore": "48/100",
+        "originalTitle": "",
+        "plot": "When his dysfunctional family clashes over the holidays, young Max (Emjay Anthony) is disillusioned and turns his back on Christmas. Little does he know, this lack of festive spirit has unleashed the wrath of Krampus: a demonic force of ancient evil intent on punishing non-believers. All hell breaks loose as beloved holiday icons take on a monstrous life of their own, laying siege to the fractured family's home and forcing them to fight for each other if they hope to survive.",
+        "rated": "PG-13",
+        "rating": "7,0",
+        "releaseDate": "20151204",
+        "runtime": [
+          "98 min"
+        ],
+        "simplePlot": "A boy who has a bad Christmas ends up accidentally summoning a Christmas demon to his family home.",
+        "title": "Krampus",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt3850590",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMjk0MjMzMTI3NV5BMl5BanBnXkFtZTgwODEyODkxNzE@._V1_SX214_AL_.jpg",
+        "votes": "2.693",
+        "writers": [
+          {
+            "name": "Todd Casey",
+            "nameId": "nm2591926"
+          },
+          {
+            "name": "Michael Dougherty",
+            "nameId": "nm1002424"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Jonathan Levine",
+            "nameId": "nm1349522"
+          }
+        ],
+        "filmingLocations": [
+          "New York City",
+          "New York",
+          "USA"
+        ],
+        "genres": [
+          "Comedy"
+        ],
+        "idIMDB": "tt3530002",
+        "languages": [
+          "English"
+        ],
+        "metascore": "57/100",
+        "originalTitle": "",
+        "plot": "Ethan (Joseph Gordon-Levitt), Isaac (Seth Rogen) and Chris (Anthony Mackie) have been friends since childhood, and for a decade, their yearly Christmas Eve reunion has been an annual night of debauchery and hilarity. Now that they're entering adulthood, the tradition is coming to an end, and to make it as memorable as possible, they set out to find the Nutcracka Ball - the Holy Grail of Christmas parties.",
+        "rated": "R",
+        "rating": "7.3",
+        "releaseDate": "20151204",
+        "runtime": [
+          "101 min"
+        ],
+        "simplePlot": "On Christmas eve, three lifelong friends, two of whom are Jewish, spend the night in New York City looking for the Holy Grail of Christmas parties.",
+        "title": "The Night Before",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt3530002",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMTkyNDY1ODQwNV5BMl5BanBnXkFtZTgwNzA2MjUwNzE@._V1_SX214_AL_.jpg",
+        "votes": "4,877",
+        "writers": [
+          {
+            "name": "Jonathan Levine",
+            "nameId": "nm1349522"
+          },
+          {
+            "name": "Kyle Hunter",
+            "nameId": "nm3773434"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Steve Martino",
+            "nameId": "nm0553942"
+          }
+        ],
+        "filmingLocations": [],
+        "genres": [
+          "Animation",
+          "Adventure",
+          "Comedy",
+          "Family"
+        ],
+        "idIMDB": "tt2452042",
+        "languages": [
+          "English"
+        ],
+        "metascore": "67/100",
+        "originalTitle": "",
+        "plot": "Charlie Brown, Snoopy, Lucy, Linus and the rest of the beloved \"Peanuts\" gang make their big-screen debut, like they've never been seen before, in state of the art 3D animation. Charlie Brown, the world's most beloved underdog, embarks upon an epic and heroic quest, while his best pal, the lovable beagle Snoopy, takes to the skies to pursue his arch-nemesis, the Red Baron. From the imagination of Charles M. Schulz and the creators of the ICE AGE films, THE PEANUTS MOVIE will prove that every underdog has his day.",
+        "rated": "G",
+        "rating": "7.9",
+        "releaseDate": "20151106",
+        "runtime": [
+          "88 min"
+        ],
+        "simplePlot": "Snoopy embarks upon his greatest mission as he and his team take to the skies to pursue their arch-nemesis, while his best pal Charlie Brown begins his own epic quest back home.",
+        "title": "The Peanuts Movie",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt2452042",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMTU1MzAxOTY2MV5BMl5BanBnXkFtZTgwNzYzMzM5NTE@._V1_SX214_AL_.jpg",
+        "votes": "5,324",
+        "writers": [
+          {
+            "name": "Bryan Schulz",
+            "nameId": "nm2421049"
+          },
+          {
+            "name": "Craig Schulz",
+            "nameId": "nm0776441"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Tom McCarthy",
+            "nameId": "nm0565336"
+          }
+        ],
+        "filmingLocations": [
+          "Toronto",
+          "Ontario",
+          "Canada"
+        ],
+        "genres": [
+          "Biography",
+          "Drama",
+          "History",
+          "Thriller"
+        ],
+        "idIMDB": "tt1895587",
+        "languages": [
+          "English"
+        ],
+        "metascore": "93/100",
+        "originalTitle": "",
+        "plot": "When the Boston Globe's tenacious \"Spotlight\" team of reporters delves into allegations of abuse in the Catholic Church, their year-long investigation uncovers a decades-long cover-up at the highest levels of Boston's religious, legal, and government establishment, touching off a wave of revelations around the world.",
+        "rated": "R",
+        "rating": "8.6",
+        "releaseDate": "20151125",
+        "runtime": [
+          "128 min"
+        ],
+        "simplePlot": "The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.",
+        "title": "Spotlight",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt1895587",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMjIyOTM5OTIzNV5BMl5BanBnXkFtZTgwMDkzODE2NjE@._V1_SY317_CR0,0,214,317_AL_.jpg",
+        "votes": "5,557",
+        "writers": [
+          {
+            "name": "Josh Singer",
+            "nameId": "nm1802857"
+          },
+          {
+            "name": "Tom McCarthy",
+            "nameId": "nm0565336"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "Ireland",
+          "UK",
+          "Canada"
+        ],
+        "directors": [
+          {
+            "name": "John Crowley",
+            "nameId": "nm1259871"
+          }
+        ],
+        "filmingLocations": [
+          "Ireland"
+        ],
+        "genres": [
+          "Drama",
+          "Romance"
+        ],
+        "idIMDB": "tt2381111",
+        "languages": [
+          "English"
+        ],
+        "metascore": "87/100",
+        "originalTitle": "",
+        "plot": "An Irish immigrant lands in 1950s Brooklyn, where she quickly falls into a new romance. When her past catches up with her, however, she must choose between two countries and the lives that exist within.",
+        "rated": "PG-13",
+        "rating": "8.1",
+        "releaseDate": "20151106",
+        "runtime": [
+          "111 min"
+        ],
+        "simplePlot": "An Irish immigrant lands in 1950s Brooklyn, where she quickly falls into a new romance. When her past catches up with her, however, she must choose between two countries and the lives that exist within.",
+        "title": "Brooklyn",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt2381111",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMzE4MDk5NzEyOV5BMl5BanBnXkFtZTgwNDM4NDA3NjE@._V1_SX214_AL_.jpg",
+        "votes": "4,226",
+        "writers": [
+          {
+            "name": "Nick Hornby",
+            "nameId": "nm0394984"
+          },
+          {
+            "name": "Colm Tóibín",
+            "nameId": "nm1460386"
+          }
+        ],
+        "year": "2015"
+      },
+      {
+        "countries": [
+          "USA"
+        ],
+        "directors": [
+          {
+            "name": "Billy Ray",
+            "nameId": "nm0712753"
+          }
+        ],
+        "filmingLocations": [
+          "Los Angeles",
+          "California",
+          "USA"
+        ],
+        "genres": [
+          "Mystery",
+          "Thriller"
+        ],
+        "idIMDB": "tt1741273",
+        "languages": [
+          "English"
+        ],
+        "metascore": "45/100",
+        "originalTitle": "",
+        "plot": "2002: Ray Kasten (Chiwetel Ejiofor) and Jess Cooper (Julia Roberts) are two investigations in a private police unit led by the DA. When they receive an anonymous tip about a girl raped and killed, they rush to the scene. Ray realizes it is Jess' daughter and the team falls apart due to the grief. In 2015, Ray comes back to LA, and says that after 13 years, he has found a lead and convinces the DA to reopen the case. They find clues and leads unknown to them, and secrets from the past come to light as they start discovering the real, chilling truth. Meanwhile, Jess, unsatisfied with the law, decides to take matters into her own hands and track down the killer, no matter what lengths she has to go to.",
+        "rated": "PG-13",
+        "rating": "6.3",
+        "releaseDate": "20151120",
+        "runtime": [
+          "111 min"
+        ],
+        "simplePlot": "A tight-knit team of rising investigators, along with their supervisor, is suddenly torn apart when they discover that one of their own teenage daughters has been brutally murdered.",
+        "title": "Secret in Their Eyes",
+        "type": "Movie",
+        "urlIMDB": "http://www.imdb.com/title/tt1741273",
+        "urlPoster": "http://ia.media-imdb.com/images/M/MV5BMjE0ODU1NDE0Ml5BMl5BanBnXkFtZTgwNzc4Njc3NjE@._V1_SX214_AL_.jpg",
+        "votes": "2,342",
+        "writers": [
+          {
+            "name": "Billy Ray",
+            "nameId": "nm0712753"
+          },
+          {
+            "name": "Juan José Campanella",
+            "nameId": "nm0002728"
+          }
+        ],
+        "year": "2015"
+      }
+    ]
+  }
+]

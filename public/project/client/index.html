@@ -1,0 +1,44 @@
+<html ng-app="MovieApp">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" />
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+    <!--for GUID-->
+    <script src="http://chancejs.com/chance.min.js"></script>
+
+    <!--below are my code-->
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    
+    
+    
+    
+    <!--controllers-->
+    <script src="views/sidebar/sidebar.controller.js"></script>
+    <script src="views/header/header.contoller.js"></script>
+    
+    <script src="views/home/home.controller.js"></script>
+    <script src="views/collections/collections.controller.js"></script>
+    <script src="views/recommendations/recommendations.controller.js"></script>
+    <script src="views/profile/profile.controller.js"></script>
+    <script src="views/register/register.controller.js"></script>
+    <!--services-->
+    <script src="service/UserService.js"></script>
+    <script src="service/MovieService.js"></script>    
+    
+
+</head>
+
+<body class="container">
+    <div ng-include src="'views/header/header.view.html'"></div>
+    <div ng-include src="'views/sidebar/sidebar.view.html'"></div>
+    <!--to be configured by config.js-->
+    <div ng-view>
+    </div>
+</body>
+
+</html>
