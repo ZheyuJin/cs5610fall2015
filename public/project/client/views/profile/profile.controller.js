@@ -11,9 +11,13 @@
             var currentUser = $rootScope.currentUser;
             $scope.username = currentUser.username;
             $scope.password = currentUser.password;
-            $scope.firstname = currentUser.firstname;
-            $scope.lastname = currentUser.lastname;
+            $scope.firstName = currentUser.firstName;
+            $scope.lastName = currentUser.lastName;
             $scope.email = currentUser.email;
+        }
+        else{
+            alert('Pleaae login');
+            $location.path('/login');
         }
 
         // click function.
@@ -27,8 +31,8 @@
 
             user.username = $scope.username;
             user.password = $scope.password;
-            user.firstname = $scope.firstname;
-            user.lastname = $scope.lastname;
+            user.firstName = $scope.firstName;
+            user.lastName = $scope.lastName;
             user.email = $scope.email;
 
             UserService.updateUser(user.id, user).then(callback);
