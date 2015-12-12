@@ -16,6 +16,10 @@
             $scope.lastName = currentUser.lastName;
             $scope.email = currentUser.email;
         }
+        else{
+            alert('Pleaae login');
+            $location.path('/login');
+        }
 
         // click function.
         $scope.update = function () {
