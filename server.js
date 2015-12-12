@@ -174,6 +174,7 @@ var SampleApp = function () {
         /*self.app.use(express.static('public/assignment/client/views'));*/
         /*self.app.use(express.static('public/assignment/server'));*/
         self.app.use(express.static('public/project/'));
+        self.app.use(express.static('public/'));
         /*self.app.use(express.static('public/project/client/home'));
         self.app.use(express.static('public/project/client/popular-movie'));
         self.app.use(express.static('public/project/client/connect-fb'));
