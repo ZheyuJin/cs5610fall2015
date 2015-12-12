@@ -12,8 +12,8 @@
             console.log(currentUser);
             $scope.username = currentUser.username;
             $scope.password = currentUser.password;
-            $scope.firstname = currentUser.firstName;
-            $scope.lastname = currentUser.lastName;
+            $scope.firstName = currentUser.firstName;
+            $scope.lastName = currentUser.lastName;
             $scope.email = currentUser.email;
         }
 
@@ -28,10 +28,12 @@
 
             user.username = $scope.username;
             user.password = $scope.password;
-            user.firstname = $scope.firstname;
-            user.lastname = $scope.lastname;
+            user.firstName = $scope.firstName;
+            user.lastName = $scope.lastName;
             user.email = $scope.email;
 
+            console.log('user');
+            console.log(user);
             UserService.updateUser(user.id, user).then(callback);
 
 

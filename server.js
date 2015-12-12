@@ -143,10 +143,10 @@ var SampleApp = function () {
         self.createRoutes();
         self.app = express();
 
-        self.app.all('*', function (req, res, next) {
-            res.header("Access-Control-Allow-Origin", "http://www.myapifilms.com");            
-            next();
-        });
+        // self.app.all('*', function (req, res, next) {
+        //     res.header("Access-Control-Allow-Origin", "http://www.myapifilms.com");            
+        //     next();
+        // });
 
 
 

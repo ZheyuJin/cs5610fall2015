@@ -4,6 +4,7 @@ module.exports = function (app, userModel, db) {
     
     app.post("/api/assignment/user", function (req, res) {
         var user = req.body;
+        console.log(req.body);
         user.id = uuid.v1();
         userModel.createUser(user).then(send);
         
