@@ -10,12 +10,12 @@
         </thead>
         <tbody>
             <tr ng-repeat="m in con.movies">
-                <td><img src='{{m.urlPoster}}' width='120px'></td>
+                <td><img src='{{m.urlPoster}}' width='200px' class="thumbnail"></td>
                 <td>{{m.title}}</td>
                 <td>{{m.simplePlot}}</td>
                 <td>
                     <!--/*use this to hide . ng-hide='true'*/-->
-                    <button ng-hide='$index%2 ' type="button" class="btn btn-default btn-lg">
+                    <button ng-hide='$index%2 ' type="button" class="btn btn-success btn-lg ">
                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Add
                     </button>
                 </td>

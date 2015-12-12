@@ -10,7 +10,8 @@
         var api = {
             trendingMovies: trendingMovies,
             getCollections: getCollections,
-            getRecommendations :getRecommendations
+            getRecommendations: getRecommendations,
+            getDetails: getDetails
         };
 
         return api;
@@ -36,7 +37,19 @@
             return d.promise;
         }
 
-        
+
+
+        // read from IMDB later.
+        function getDetails(idIMDB) {
+            /*    var url = "http://www.myapifilms.com/imdb/inTheaters";*/
+            var mockURL = "movies.json";
+            var d = $q.defer();
+            $http.get(mockURL).success(function (data) {
+                d.resolve(data[0].movies[1])
+            });
+            return d.promise;
+        }
+
         function getRecommendations() {
             /*    var url = "http://www.myapifilms.com/imdb/inTheaters";*/
             var mockURL = "movies.json";
@@ -47,7 +60,7 @@
             return d.promise;
         }
 
-        
+
         function getCollections() {
             /*    var url = "http://www.myapifilms.com/imdb/inTheaters";*/
             var mockURL = "movies.json";

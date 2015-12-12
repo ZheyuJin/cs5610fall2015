@@ -27,8 +27,9 @@
             .when("/login", {
                 templateUrl: "views/login/login.view.html",
                 controller: "LoginController as con"
-            }).when("/movie/:imdbid/", {
-                redirectTo: "/"
+            }).when("/details/:imdbid", {
+                templateUrl: "views/details/details.view.html",
+                controller: "DetailsController as con"
             }).otherwise({
                 redirectTo: "/"
             });

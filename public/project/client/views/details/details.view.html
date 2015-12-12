@@ -1,0 +1,38 @@
+<div class="col-sm-9  main panel panel-success">
+
+
+    <div class="row panel-heading">
+        <div class="col-sm-4">
+            <img width="600px" style="margin-left:0px" class="img-responsive img-rounded" src="{{con.details.urlPoster}}">
+        </div>
+
+        <div class="col-sm-8">
+            <h1 style="margin-top:0px;font-family: Arial Black, Gadget, sans-serif;font-weight:normal;">{{con.details.title}}</h1>
+
+            <h3><b>Year</b>: {{con.details.year}}</h3>
+            <h3><b>Running Time:</b> {{con.details.runtime[0]}}</h3>
+            <h3><b>Director:</b> {{con.details.directors[0].name }}</h3>
+            <h3><b>Ratings:</b> {{con.details.rating}}</h3>
+            <h3><b>Genre:</b> {{con.details.genres.slice(0,2).join(" | ")}}</h3>
+            <h3><b>Country:</b> {{con.details.countries.join("|")}}</h3>
+            <h3><b>Rated:</b> {{con.details.rated}}</h3>
+            <h3> <a href = "{{con.details.urlIMDB}}"  > IMDB Link</a></h3>
+            <button type="button" class="btn btn-success btn-tl btn-block">
+                <span class="glyphicon glyphicon-star"></span> Add
+            </button>
+        </div>
+
+    </div>
+
+    <!--plots..-->
+    <div class="row panel-body">
+        <div class="col-sm-12 panel">
+            <h3 style="font-family: Georgia, serif">{{con.details.plot}}</h3>
+        </div>
+
+
+    </div>
+
+
+
+</div>
