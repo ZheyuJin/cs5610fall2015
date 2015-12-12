@@ -1,55 +1,63 @@
 module.exports = function (app, userModel, db) {
 
     var uuid = require('node-uuid');
-
-    /*try some functional styles..*/
-
+    
     app.post("/api/assignment/user", function (req, res) {
-
         var user = req.body;
+        console.log(req.body);
         user.id = uuid.v1();
-        var response = userModel.createUser(user);
-        console.log(response)
-        res.json(response);
+        userModel.createUser(user).then(send);
+        
+        function send(response) {
+            res.json(response);
+        }
     });
 
     app.get("/api/assignment/user", function (req, res) {
         var username = req.query.username;
         var password = req.query.password;
-
-        var ret = null;
-
-        if (username && password) {
+        if (username != null && password != null) {
             var credentials = {
                 username: username,
                 password: password
             };
-
-            ret = userModel.findUserByCredentials(credentials);
-        } else if (username) {
-            ret = userModel.findUserByUsername(username);
+            userModel.findUserByCredentials(credentials).then(send);
+        } else if (username != null) {
+            userModel.findUserByUsername(username).then(send);
         } else {
-            ret = userModel.findAllUsers();
-
+            userModel.findAllUsers().then(send);
         }
-
-        res.json(ret);
+        
+        function send(response) {
+            res.json(response);
+        }
     });
 
-
     app.get("/api/assignment/user/:id", function (req, res) {
-        var id = req.params.id;
-        res.json(userModel.findUserById(id));
+        var id = req.params["id"];
+        userModel.findUserById(id).then(send);
+        
+        function send(response) {
+            res.json(response);
+        }
     });
 
     app.put("/api/assignment/user/:id", function (req, res) {
-        var id = req.params.id;
+        var id = req.params["id"];
         var user = req.body;
-        res.json(userModel.updateUser(id, user));
+        userModel.updateUser(id, user).then(send);
+        
+        function send(response) {
+            res.json(response);
+        }
     });
 
     app.delete("/api/assignment/user/:id", function (req, res) {
-        var id = req.params.id;
-        res.json(userModel.deleteUser(id));
+        var id = req.params["id"];
+        userModel.deleteUser(id).then(send);
+        
+        function send(response) {
+            res.json(response);
+        }
     });
 };
