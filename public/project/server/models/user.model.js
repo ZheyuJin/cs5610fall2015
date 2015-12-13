@@ -2,8 +2,13 @@ module.exports = function (app, mongoose, UserSchema) {
     'use strict'
 
     var fs = require("fs");
-    var userList = JSON.parse(fs.readFileSync("public/assignment/server/models/user.mock.json", "utf8"));
-    var UserModel = mongoose.model("cs5610.assignment.user", UserSchema);
+    var userList = JSON.parse(fs.readFileSync("public/project/server/models/user.mock.json", "utf8"));
+
+    console.log(mongoose);
+    console.log(UserSchema);
+    
+    // data access object
+    var UserModel = mongoose.model("cs5610.project.user", UserSchema);
     var q = require('q');
 
     // delete and re-insert all mock users.
@@ -26,48 +31,149 @@ module.exports = function (app, mongoose, UserSchema) {
         updateUser: updateUser,
         deleteUser: deleteUser,
         findUserByUsername: findUserByUsername,
-        findUserByCredentials: findUserByCredentials
+        findUserByCredentials: findUserByCredentials,
+        addToCollections:addToCollections,
+        findRecommendations : findRecommendations,
+        findCollections: findCollections,
+        addToRecommendations : addToRecommendations
     }
 
     return api;
 
+    /*return array of collections*/
+    function findCollections(id){
+        var d = q.defer();
+        UserModel.findOne(
+        {
+            id: id
+        },
+        function (err, user) {
+            if(err){
+                console.error(err)
+                d.reject(err);
+            }
+            else{
+                console.log('user' + user)
+                d.resolve(user? user.collections : []);
+            }
+        });
+
+        return d.promise;
+    }
+
+    /*return array of recommendations*/
+    function findRecommendations(id){
+        var d = q.defer();
+        UserModel.findOne(
+        {
+            id: id
+        },
+        function (err, user) {
+            if(err){
+                console.error(err)
+                d.reject(err);
+            }
+            else
+                d.resolve(user? user.recommendations : []);
+        });
+
+        return d.promise;
+    }
+
+
+    /*bugs here*/
+    function addToCollections(id, idIMDB){
+      
+        var d = q.defer();                    
+
+        findCollections(id).then(function(data){
+            data.push(idIMDB);
+
+            UserModel.findOneAndUpdate(
+                {id: id}, 
+                {collections: data}, 
+                function (err, user) {
+                    if(err){
+                        console.error(err)
+                        d.reject(err);
+                    }
+                    else
+                        d.resolve(data);
+                });
+        });                        
+
+        return d.promise;
+    }
+
+
+    function addToRecommendations(id, recommendations){
+      
+        var d = q.defer();                    
+
+        findRecommendations(id).then(function(data){
+            console.log(recommendations)
+            data = data.concat(recommendations);
+
+            UserModel.findOneAndUpdate(
+                {id: id}, 
+                {recommendations: data}, 
+                function (err, user) {
+                    if(err){
+                        console.error(err)
+                        d.reject(err);
+                    }
+                    else{
+                        console.log('resolve')
+                        console.log(data);
+                        d.resolve(data);
+                    }
+                });
+        });                        
+
+        return d.promise;
+    }
+
+
+
     function createUser(user) {
-        var deferred = q.defer();
+        var d = q.defer();
         UserModel.create({
             id: user.id,
             firstName: user.firstName,
             lastName: user.lastName,
             username: user.username,
             password: user.password,
-            email: user.email
+            email: user.email,
+            collections: user.collections,
+            recommendations: user.recommendations
         }, function (err, result) {
             if(err){
-                deferred.reject(err);
+                d.reject(err);
                 console.error(err);
             }
             else
-                deferred.resolve(user);                        
+                d.resolve(user);                        
         });
 
-        return deferred.promise;
+        return d.promise;
     }
 
 
     function findAllUsers() {
-        var deferred = q.defer();
+        var d = q.defer();
         UserModel.find(function (err, result) {
             if(err){
                 console.error(err);
-                deferred.reject(err);
+                d.reject(err);
             }
             else
-                deferred.resolve(result);
+                d.resolve(result);
         });
-        return deferred.promise;
+        return d.promise;
     }
 
     function findUserById(id) {
-        var deferred = q.defer();
+        var d = q.defer();
         UserModel.find(
         {
             id: user.id
@@ -76,19 +182,19 @@ module.exports = function (app, mongoose, UserSchema) {
         function (err, result) {
             if(err){
                 console.error(err);
-                deferred.reject(err);
+                d.reject(err);
             }
             else // will give undefined if result has length 0. dont worry.
-                deferred.resolve(result[0]);
+                d.resolve(result[0]);
             
         });
 
-        return deferred.promise;
+        return d.promise;
     }
 
 
     function updateUser(id, user) {
-        var deferred = q.defer();
+        var d = q.defer();
         user.id = id;
         UserModel.findOneAndUpdate(
         {
@@ -103,25 +209,19 @@ module.exports = function (app, mongoose, UserSchema) {
         }, function (err, result) {
             if(err){
                 console.error(err)
-                deferred.reject(err);
+                d.reject(err);
             }
             else
-                deferred.resolve(user);
+                d.resolve(user);
         });
 
 
-        return deferred.promise;
+        return d.promise;
     }
 
 
-
-
-
-
-
-
     function deleteUser(id) {
-        var deferred = q.defer();
+        var d = q.defer();
         UserModel.remove(
         {
             id: user.id
@@ -131,19 +231,19 @@ module.exports = function (app, mongoose, UserSchema) {
             UserModel.find(function (err, result) {
                 if(err){
                     console.error(err)  ;
-                    deferred.reject(err);
+                    d.reject(err);
                 }
                 else
-                    deferred.resolve(null);
+                    d.resolve(null);
             });
         });
 
 
-        return deferred.promise;
+        return d.promise;
     }
 
     function findUserByUsername(username) {
-        var deferred = q.defer();
+        var d = q.defer();
 
         UserModel.find(
         {
@@ -153,16 +253,16 @@ module.exports = function (app, mongoose, UserSchema) {
             console.log(result);
             if (err) {
                 console.error(err);
-                deferred.reject(err);
+                d.reject(err);
             } else {
-                deferred.resolve(result[0]);
+                d.resolve(result[0]);
             }
         });
-        return deferred.promise;
+        return d.promise;
     }
 
     function findUserByCredentials(credentials) {
-        var deferred = q.defer();
+        var d = q.defer();
         UserModel.find(
         {
             username: credentials.username,
@@ -171,12 +271,12 @@ module.exports = function (app, mongoose, UserSchema) {
         function (err, result) {
             if (err) {
                 console.error(err);
-                deferred.reject(err);
+                d.reject(err);
             } else {
                 console.log(result);
-                deferred.resolve(result[0]);
+                d.resolve(result[0]);
             }
         });
-        return deferred.promise;
+        return d.promise;
     }
 };

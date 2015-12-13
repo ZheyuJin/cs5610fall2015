@@ -20,7 +20,7 @@
 
                 $rootScope.currentUser = currentUser;
                 console.log($rootScope.currentUser);
-                $location.path("/profile")
+                $location.path("/collections")
 
 
 

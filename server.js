@@ -151,11 +151,11 @@ var SampleApp = function () {
 
 
         //alow Access-Control-Allow-Origin *
-/*
+
         self.app.use(cors());
         console.log(cors);
         console.log('using cors module now.');
-*/
+
 
 
 /*        //alow Access-Control-Allow-Origin *
@@ -219,7 +219,7 @@ var SampleApp = function () {
         var services = new servicesModule(self.app, mongoose, db);
 
         // load project code
-        require("./public/project/server/app.js")(self.app);
+        require("./public/project/server/app.js")(self.app,mongoose, db);
     }
 
 

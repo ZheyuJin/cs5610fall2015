@@ -29,7 +29,8 @@
     "fs": "0.0.2",
     "mongoose": "~4.2.9",
     "multer": "~1.1.0",
-    "q": "^1.4.1"
+    "q": "^1.4.1",
+    "request": "~2.67.0"
   },
   "devDependencies": {},
   "bundleDependencies": [],

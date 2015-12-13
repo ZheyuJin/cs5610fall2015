@@ -1,20 +1,14 @@
-module.exports = function (app) {
-    
-  /*  var userModelModule = require("./models/user.model.js");
-    var userModel = new userModelModule(app);
-    
-    var formModelModule = require("./models/form.model.js");
-    var formModel = new formModelModule(app);
-    
-    var userServiceModule = require("./services/user.service.js");
-    var userService = new userServiceModule(app, userModel, null);
-    
-    var formServiceModule = require("./services/form.service.js");
-    var formService = new formServiceModule(app, formModel, null);
-    
-    var fieldServiceModule = require("./services/field.service.js");
-    var fieldService = new fieldServiceModule(app, formModel, null);
-*/
-    
-    
+module.exports = function (app, mongoose, db) {
+	/*schemas*/
+
+	var userSchema =  require("./models/user.schema.js")(mongoose);
+
+	/*models get schemas*/
+	var userModel = require("./models/user.model.js")(app, mongoose, userSchema);
+
+	/*services get models*/
+
+	require("./services/user.service.js")(app, userModel, null);   
+	require("./services/movie.service.js")(app, userModel, null);   
+
 };

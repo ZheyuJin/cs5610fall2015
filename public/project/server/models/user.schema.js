@@ -6,10 +6,12 @@ module.exports = function (mongoose) {
 		lastName: {type: String, default: ""},
 		username: String,
 		password: String,
-		email: {type: String, default: ""}
+		email: {type: String, default: ""},
+		collections:[],
+		recommendations:[]
 	},
 	{
-		collection: "cs5610.assignment.user"
+		collection: "cs5610.project.user"
 	});
 
 

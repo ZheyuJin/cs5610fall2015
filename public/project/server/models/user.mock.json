@@ -4,34 +4,44 @@
         "firstName": "Alice",
         "lastName": "Wonderland",
         "username": "alice",
-        "password": "alice"
+        "password": "alice",
+        "collections": ["tt3534282" , "tt3569230"],
+        "recommendations" : ["tt1596363"]
     },
     {
         "id": 234,
         "firstName": "Bob",
         "lastName": "Hope",
         "username": "bob",
-        "password": "bob"
+        "password": "bob",
+        "collections": ["tt3534282" , "tt3569230"],
+        "recommendations" : ["tt1596363"]
     },
     {
         "id": 345,
         "firstName": "Charlie",
         "lastName": "Brown",
         "username": "charlie",
-        "password": "charlie"
+        "password": "charlie",
+        "collections": ["tt3534282" , "tt3569230"],
+        "recommendations" : ["tt1596363"]
     },
     {
         "id": 456,
         "firstName": "Dan",
         "lastName": "Craig",
         "username": "dan",
-        "password": "dan"
+        "password": "dan",
+        "collections": ["tt3534282" , "tt3569230"],
+        "recommendations" : ["tt1596363"]
     },
     {
         "id": 567,
         "firstName": "Edward",
         "lastName": "Norton",
         "username": "ed",
-        "password": "ed"
+        "password": "ed",
+        "collections": ["tt3534282" , "tt3569230"],
+        "recommendations" : ["tt1596363"]
     }
 ]

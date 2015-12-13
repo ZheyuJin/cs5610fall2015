@@ -1,26 +1,33 @@
 <div class="col-sm-9  main">
-    <h1 class="page-header">Trending Movies</h1>
-    <div class="panel panel-default">
-    <table class="table table-responsive table-condensed table-striped  table-bordered table-responsive table-hover">
-        <thead>
-            <th>Poster</th>
-            <th>Title</th>
-            <th>Plot</th>
-            <th>Add</th>
-        </thead>
-        <tbody>
-            <tr ng-repeat="m in con.movies">
-                <td><img src='{{m.urlPoster}}' width='200px' class="thumbnail"></td>
-                <td>{{m.title}}</td>
-                <td>{{m.simplePlot}}</td>
-                <td>
-                    <!--/*use this to hide . ng-hide='true'*/-->
-                    <button ng-hide='$index%2 ' type="button" class="btn btn-success btn-lg ">
-                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Add
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
+    
+        <h1>Search Movie With Title!</h1>
+        <div class="input-group" style="padding-bottom:20px; padding-top:20px">
+          <input type="text" class="form-control" ng-model="con.title">
+          <span class="input-group-btn">
+              <button class="btn  btn-success" type="button"  ng-click="con.searchMovies(con.title)">Search!</button></span>
+          </div>
+    
+       
+        <table  class="table table-responsive table-condensed table-striped  table-bordered table-responsive table-hover">
+            <!-- <thead>
+                <th>Poster</th>
+                <th>Title</th>
+                <th>Plot</th>
+                <th>Add</th>
+            </thead> -->
+            <tbody>
+                <tr ng-repeat="m in con.movies">
+                    <td><img src='{{m.urlPoster}}' width='200px' class="thumbnail"></td>
+                    <td>{{m.title}}</td>
+                    <td>{{m.simplePlot}}</td>
+                    <td>
+                        <!--/*use this to hide . ng-hide='true'*/-->
+                        <button  ng-click='con.addToCollections(m)' ng-hide='m.hidebutton' type="button" class="btn btn-success btn-lg ">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Add
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
 </div>

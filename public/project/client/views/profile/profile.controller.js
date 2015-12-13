@@ -4,21 +4,23 @@
 
 
     function ProfileController($scope, $rootScope, $location, UserService) {
-
-        // fill form with current user info.
-        if ($rootScope.currentUser != null) {
-
-            var currentUser = $rootScope.currentUser;
-            $scope.username = currentUser.username;
-            $scope.password = currentUser.password;
-            $scope.firstName = currentUser.firstName;
-            $scope.lastName = currentUser.lastName;
-            $scope.email = currentUser.email;
-        }
-        else{
+        // login check
+        if(!$rootScope.currentUser){
             alert('Pleaae login');
             $location.path('/login');
+            return;
         }
+
+        // fill form with current user info.
+    
+        var currentUser = $rootScope.currentUser;
+        $scope.username = currentUser.username;
+        $scope.password = currentUser.password;
+        $scope.firstName = currentUser.firstName;
+        $scope.lastName = currentUser.lastName;
+        $scope.email = currentUser.email;
+        
+
 
         // click function.
         $scope.update = function () {

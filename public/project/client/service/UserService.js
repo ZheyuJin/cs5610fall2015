@@ -33,9 +33,7 @@
 
         function createUser(user) {
             var d = $q.defer();
-            $http.post("/api/project/user", user).success((data) => {
-                d.resolve(data)
-            });
+            $http.post("/api/project/user", user).success(d.resolve);
             return d.promise;
         }
 
