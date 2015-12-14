@@ -10,7 +10,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="m in con.movies">
-                    <td><img src='{{m.urlPoster}}' width='120px'></td>
+                    <td><img src='{{m.urlPoster}}' width='120px' ng-click="con.setShared(m)"></td>
                     <td>{{m.title}}</td>
                     <td>{{m.plot}}</td>
                     <!--<td>

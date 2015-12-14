@@ -47,9 +47,9 @@
         }
 
         /*return collections of this user*/
-        function addToCollections(id, idIMDB){            
+        function addToCollections(id, idIMDB, movie){            
             var url = '/api/project/collections/';
-            var body = {id:id, idIMDB:idIMDB};
+            var body = {id:id, idIMDB:idIMDB, movie: movie};
 
             $http.post(url,body).success(function () {
                 console.log('success. body below');
@@ -124,18 +124,8 @@
             var url = "/api/project/recommendations/" + id;
             var d = $q.defer();
             
-            $http.get(url).success(function (movieIDs) {
-                var movies = [];
-                var promises = [];
-                movieIDs.forEach(function(id){
-                    promises.push(fetchMovie(id).then(function(movie){movies.push(movie)}));
-                });
-
-                $q.all(promises).then(function(){
-                    console.log(movies);
-                    d.resolve(movies);
-                });
-                
+            $http.get(url).success(function (movies) {
+                d.resolve(movies);            
             });
 
             return d.promise;
@@ -145,20 +135,10 @@
         function getCollections(id) {
             var url = "/api/project/collections/" + id;
             var d = $q.defer();
-            $http.get(url).success(function (movieIDs) {
-                var movies = [];
-                var promises = [];
-                movieIDs.forEach(function(mid){
-                    promises.push(fetchMovie(mid).then(function(movie){movies.push(movie)}));
-                });
-
-                $q.all(promises).then(function(){
-                    console.log(movies);
-                    d.resolve(movies);
-                });
-                
+            
+            $http.get(url).success(function (movies) {
+                d.resolve(movies);            
             });
-
 
             return d.promise;
         }

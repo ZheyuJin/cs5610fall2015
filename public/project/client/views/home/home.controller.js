@@ -38,10 +38,14 @@
 			var user = $rootScope.currentUser;
 
 			movie.hidebutton = true;
-			MovieService.addToCollections(user.id, movie.idIMDB);
+			MovieService.addToCollections(user.id, movie.idIMDB, movie);
 		}
 
-		 
+        _this.setShared  = setShared;
+        function setShared(movie){
+            $rootScope.sharedMovie = movie;
+            $location.path('/details')
+        }		 
 
 	}
 })();

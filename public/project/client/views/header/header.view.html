@@ -1,5 +1,5 @@
-<nav class="nav   jumbotron">
-    <div class="container-fluid " ng-controller="HeaderController">
+<nav class="nav   jumbotron" style="backgroud-color:red">
+    <div class="container-fluid " ng-controller="HeaderController as con">
         <div class="navbar-header ">
             <h1 style="margin-top:0px;font-family: Arial Black, Gadget, sans-serif;font-weight:normal;" class="header-text"><a class="navbar-brand" href="#/"><span class="glyphicon glyphicon-music"></span>Movie Collections<span class="glyphicon glyphicon-film"></span></a></h1>
         </div>
@@ -11,7 +11,7 @@
                 <a href="#/login">Login</a>
             </li>
             <li ng-class="{'active' : $location.url().indexOf('logout') !=-1 }">
-                <a href="#">Logout</a>
+                <a href="#/login" ng-click="con.logout()">Logout</a>
             </li>
 
             <li><a href="https://docs.google.com/document/d/1--xSLA0emj0I-MzIUaegbmWmzrF6z3IFeaqPRaNSAac/edit?usp=sharing">{Proposal}</a></li>

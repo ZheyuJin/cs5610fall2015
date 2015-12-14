@@ -27,7 +27,7 @@
             .when("/login", {
                 templateUrl: "views/login/login.view.html",
                 controller: "LoginController as con"
-            }).when("/details/:imdbid", {
+            }).when("/details", {
                 templateUrl: "views/details/details.view.html",
                 controller: "DetailsController as con"
             }).otherwise({

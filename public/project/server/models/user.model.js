@@ -53,8 +53,8 @@ module.exports = function (app, mongoose, UserSchema) {
                 d.reject(err);
             }
             else{
-                console.log('user' + user)
-                d.resolve(user? user.collections : []);
+                console.log('user findCollections' + user)
+                d.resolve(user ? user.collections : []);
             }
         });
 

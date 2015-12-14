@@ -1,10 +1,10 @@
 <div class="col-sm-9  main">
     
         <h1>Search Movie With Title!</h1>
-        <div class="input-group" style="padding-bottom:20px; padding-top:20px">
-          <input type="text" class="form-control" ng-model="con.title">
+        <div class="input-group" style="padding-bottom:20px; padding-top:20px" >
+          <input type="text" class="form-control" ng-model="con.title" required>
           <span class="input-group-btn">
-              <button class="btn  btn-success" type="button"  ng-click="con.searchMovies(con.title)">Search!</button></span>
+              <button class="btn  btn-success" type="button"  ng-click="con.searchMovies(con.title)">Search in IMDB!</button></span>
           </div>
     
        
@@ -17,7 +17,7 @@
             </thead> -->
             <tbody>
                 <tr ng-repeat="m in con.movies">
-                    <td><img src='{{m.urlPoster}}' width='200px' class="thumbnail"></td>
+                    <td><img src='{{m.urlPoster}}' width='200px' class="thumbnail" ng-click="con.setShared(m)"></td>
                     <td>{{m.title}}</td>
                     <td>{{m.simplePlot}}</td>
                     <td>
