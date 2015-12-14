@@ -1,4 +1,8 @@
 module.exports = function (app, userModel, movieModel, db) {
+    Array.prototype.diff = function(a) {
+        return this.filter(function(i) {return a.indexOf(i) < 0;});
+    };
+
 
     var uuid = require('node-uuid');
     var request = require("request");
@@ -49,9 +53,6 @@ module.exports = function (app, userModel, movieModel, db) {
         var psReco = findSimilar(idIMDB).then(function (recommendations){
 
 
-            Array.prototype.diff = function(a) {
-                return this.filter(function(i) {return a.indexOf(i) < 0;});
-            };
 
             /*will remove recommendations whose idIMDB already in DB.*/
             movieModel.getAllidIMDBs().then(function(existing){
@@ -71,7 +72,7 @@ module.exports = function (app, userModel, movieModel, db) {
 
         var psColl = userModel.addToCollections(id, idIMDB);
         var psInsertMovie = movieModel.removeIfExists([movie.idIMDB])
-            .then( function(ignore){movieModel.insertMovie(movie);});
+        .then( function(ignore){movieModel.insertMovie(movie);});
         
         // do all three operations above
         q.all([psReco, psColl, psInsertMovie]).then(send, err)
@@ -86,17 +87,17 @@ module.exports = function (app, userModel, movieModel, db) {
         }
     });
 
-function requestMovie(idIMDB){
-    var d = q.defer();   
+    function requestMovie(idIMDB){
+        var d = q.defer();   
 
-    var url = "http://www.myapifilms.com/imdb?idIMDB="+idIMDB+"&similarMovies=1&format=JSON";
-    request(url, function(error, response, body) {
-        var movie = JSON.parse(body);            
-        d.resolve(movie);            
-    });
+        var url = "http://www.myapifilms.com/imdb?idIMDB="+idIMDB+"&similarMovies=1&format=JSON";
+        request(url, function(error, response, body) {
+            var movie = JSON.parse(body);            
+            d.resolve(movie);            
+        });
 
-    return d.promise;
-}
+        return d.promise;
+    }
 
 function findSimilar(idIMDB){
         // find similar movies.
@@ -144,11 +145,19 @@ function findSimilar(idIMDB){
         
         function send(response) {
             // only return 10 recoomendtaions
-            response = response.slice(0,10);
 
-            movieModel.readMovies(response).then(
-                function(movies){res.send(movies)}
-                );
+            userModel.findCollections(id).then(function(coll){
+                console.log('coll \t' + coll)
+                console.log('response \t' + response)
+                response = response.diff(coll);
+                response = response.slice(0,10);
+
+                console.log('response \t' + response)
+                movieModel.readMovies(response).then(
+                    function(movies){res.send(movies)}
+                    );    
+            })
+            
 
             
         }
