@@ -55,8 +55,8 @@ module.exports = function (app, userModel, movieModel, db) {
 
             /*will remove recommendations whose idIMDB already in DB.*/
             movieModel.getAllidIMDBs().then(function(existing){
-
-                recommendations.diff(existing).forEach(function(idIMDB){
+                var head = recommendations.slice(0,2);
+                head.diff(existing).forEach(function(idIMDB){
                     requestMovie(idIMDB).then(
                         function(movie){
                             movieModel.insertMovie(movie)
